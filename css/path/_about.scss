@@ -1,0 +1,34 @@
+.about {
+    background: map-get($color, "lightbg");
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .image {
+        flex: 1 1 42rem;
+        padding-right: 5rem;
+        padding-bottom: 5rem;
+        img {
+            width: 100%;
+            box-shadow: 4rem 4rem 0 map-get($color, "boxshadow");
+            border-top-left-radius: 10rem;
+            border-bottom-left-radius: 10rem;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 10rem;
+            overflow: hidden;
+        }
+    }
+    .content {
+        flex: 1 1 42rem;
+        h3 {
+            font-size: 3rem;
+            color: map-get($color, "green");
+        }
+        p {
+            color: map-get($color, "black");
+            font-size: 1.5rem;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+    }
+}

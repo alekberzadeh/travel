@@ -1,0 +1,98 @@
+$breakpoint-bigscreen1200: 1200px;
+$breakpoint-bigscreen991: 991px;
+$breakpoint-tabletscreen: 768px;
+$breakpoint-mobilescreen: 450px;
+
+@media only screen and (max-width: $breakpoint-bigscreen1200) {
+    .header {
+        padding: 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-bigscreen991) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 7rem;
+    }
+
+    .home{
+        .box{
+            padding: 2rem;
+            justify-content: center;
+            background-position: right !important;
+
+            &.second{
+                justify-content: center;
+                background-position: left !important;
+            }
+
+            .content{
+                text-align: center;
+
+                span{
+                    font-size: 3rem;
+                }
+
+                h3{
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tabletscreen) {
+    .header {
+        #menu-btn {
+            display: inline-block;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: -110%;
+            background: map-get($color, "white");
+            z-index: 10000;
+            width: 35rem;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                left: 0;
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+            }
+            a {
+                margin: 1rem 0;
+                font-size: 3rem;
+            }
+
+            #nav-close {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 2rem;
+            }
+        }
+        
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobilescreen) {
+    html {
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+}

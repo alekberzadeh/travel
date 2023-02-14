@@ -1,0 +1,45 @@
+.home{
+    padding: 0;
+    
+    .box{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-size: cover !important;
+        background-position: center !important;
+        justify-content: flex-end;
+        padding: 2rem 9%;
+
+        &.second{
+            justify-content: flex-start;
+        }
+        
+        .content{
+            width: 50rem;
+
+            span{
+                font-size: 4rem;
+                color: map-get($color, "black");
+            }
+
+            h3{
+                font-size: 6rem;
+                color: map-get($color, "green");
+                padding-top: 0.5rem;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 1.5rem;
+                color: map-get($color, "black");
+                padding: 1rem 0;
+                line-height: 2;
+            }
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        font-size: 3rem;
+        color: map-get($color, "black" );
+    }
+}

@@ -1,0 +1,98 @@
+.blogs {
+    .slide {
+        text-align: center;
+        padding: 2rem;
+
+        img {
+            height: 25rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+        .icons {
+            background: map-get($color, "black");
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+            top: -2rem;
+            display: inline-block;
+            a {
+                font-size: 1.4rem;
+                color: map-get($color, "white");
+                margin: 0 1rem;
+
+                i {
+                    padding-right: 0.5rem;
+                    color: map-get($color, "green");
+                }
+                &:hover {
+                    color: map-get($color, "green");
+                }
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            color: map-get($color, "black");
+        }
+        p {
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            line-height: 2;
+            color: map-get($color, "black");
+        }
+    }
+}
+
+.newsletter {
+    background: map-get($color, "lightbg");
+
+    .content {
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2;
+            color: map-get($color, "black");
+        }
+        form{
+            margin-top: 2rem;
+            background: map-get($color, "white");
+            border-radius: 5rem;
+            border: 0.2rem solid  map-get($color, "black");
+            padding: 0.7rem;
+            display: flex;
+            .email{
+                width: 100%;
+                background: none;
+                text-transform: none;
+                font-size: 1.6rem;
+                color: map-get($color, "black");
+                padding: 0 1.3rem;
+            }
+            .btn{
+                margin-top: 0;
+                border-radius: 5rem;
+                background: map-get($color, "black");
+                color: map-get($color, "white");
+
+                &:hover{
+                    background: map-get($color, "white");
+                    color: map-get($color, "black");
+                }
+            }
+        }
+    }
+
+    
+}
+
+.clients{
+    .silde{
+        text-align: center;
+        img{
+            height: 12rem;
+        }
+    }
+}

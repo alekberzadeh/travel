@@ -1,0 +1,49 @@
+.footer{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .box-container{
+        @include grid(25rem);
+
+        .box{
+            h3{
+                font-size: 2rem;
+                padding: 1.5rem 0;
+                color: map-get($color, "white");
+            }
+            a{
+                display: block;
+                color: map-get($color, "white");
+                font-size: 1.4rem;
+                padding: 1rem 0;
+                width: max-content;
+                i{
+                    color: map-get($color, "green");
+                    padding-right: .5rem;
+                }
+
+                &:hover{
+                    color: map-get($color, "green");
+                    i{
+                        padding-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .credit{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        color: map-get($color, "white");
+        span{
+            color: map-get($color, "green");
+        }
+    }
+
+}

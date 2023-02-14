@@ -1,0 +1,59 @@
+.packages{
+    background: map-get($color, "lightbg" );
+
+    .box-container{
+        @include grid(32rem);
+
+        .box{
+            text-align: center;
+            background: map-get($color, "white" );
+            border: 0.2rem solid  map-get($color, "black");
+            box-shadow: 0 .5rem 1rem map-get($color, "boxshadow" );
+            border-radius: .5rem;
+
+            &:hover{
+                background: map-get($color, "black");
+                
+                .content > * {
+                    color: map-get($color, "white");
+                }
+                .btn{
+                    border-color: map-get($color, "white");
+                    &:hover{
+                        background: map-get($color, "white");
+                        color: map-get($color, "black");
+                    }
+                }
+            }
+            .image{
+                height: 25rem;
+                overflow: hidden;
+                padding: 2rem;
+                padding-bottom: 0;
+                border-radius: 0.5rem;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 0.5rem;
+                }
+            }
+            .content{
+                padding: 2rem;
+                h3{
+                    font-size: 2rem;
+                    color: map-get($color, "black" );
+                }
+                p{
+                    font-size: 1.5rem;
+                    line-height: 2;
+                    padding: 1rem 0;
+                }
+                .price{
+                    font-size: 2rem;
+                    color: map-get($color, "green" );
+                }
+            }
+        }
+    }
+}

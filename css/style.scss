@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+$color:(
+    "white" :#fff,
+    "color2" : #aaa,
+    "lightbg" : #eee,
+    "green" : #219150,
+    "black":#10221b,
+    "boxshadow" : rgba(0, 0, 0, 0.1),
+);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap:1.5rem;
+
+  // --------------> @include grid(29rem);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background:  map-get($color, "white");
+}
+
+html::-webkit-scrollbar-thumb {
+  background:  map-get($color, "black");
+}
+
+section {
+    padding: 5rem 9%;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.2rem solid  map-get($color, "black");
+    border-radius: 2rem;
+    color:  map-get($color, "black");
+    transition: .2s linear;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+
+    &:hover {
+      background:  map-get($color, "black");
+      color:  map-get($color, "white");
+      letter-spacing: .1rem;
+      border-radius: 2.5rem;
+    }
+  }
+  
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color:  map-get($color, "black");
+  }
+
+@import "path/color";
+@import "path/header";
+@import "path/home";
+@import "path/category";
+@import "path/about";
+@import "path/shop";
+@import "path/packages";
+@import "path/reviews";
+@import "path/services";
+@import "path/blogs";
+@import "path/footer";
+@import "path/responsive";

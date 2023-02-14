@@ -1,0 +1,49 @@
+.services{
+    background: map-get($color, "lightbg" );
+
+    .box-container{
+        @include grid(32rem);
+        .box{
+            text-align: center;
+            padding: 2rem;
+            background: map-get($color, "white" );
+            border: 0.2rem solid  map-get($color, "black");
+            border-radius: .5rem;
+
+            &:hover{
+                background: map-get($color, "black");
+                
+                img{
+                    filter: invert(1);
+                }
+               
+                p{
+                    color: map-get($color, "white");
+                }
+
+                .btn{
+                    border-color: map-get($color, "white");
+                    color: map-get($color, "white");
+                    &:hover{
+                        background: map-get($color, "white");
+                        color: map-get($color, "black");
+                    }
+                }
+            }
+            img{
+                height: 10rem;
+                margin-bottom: 1rem;
+            }
+            h3{
+                color: map-get($color, "green" );
+                font-size: 2rem;
+            }
+            p{
+                padding: 1rem 0;
+                font-size: 1.5rem;
+                color: map-get($color, "black" );
+                line-height: 2;
+            }
+        }
+    }
+}
